@@ -49,9 +49,9 @@ export function Navbar() {
           data-testid="link-logo"
         >
           <img 
-            src={isScrolled ? "/logo-dark.png" : "/logo.png"}
+            src="/logo-dark.png"
             alt="Ecom Holding" 
-            className={`w-auto transition-all ${isScrolled ? "h-10" : "h-14"}`}
+            className={`w-auto transition-all ${isScrolled ? "h-10" : "h-14 brightness-0 invert"}`}
           />
         </a>
 
