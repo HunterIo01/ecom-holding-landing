@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
+import { Menu, X, LogIn } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -78,6 +79,20 @@ export function Navbar() {
           >
             Contactanos
           </Button>
+          <Link href="/login">
+            <Button
+              variant="outline"
+              className={`rounded-full px-6 ${
+                isScrolled 
+                  ? "border-primary text-primary hover:bg-primary hover:text-white" 
+                  : "border-white text-white hover:bg-white hover:text-primary bg-transparent"
+              }`}
+              data-testid="button-login"
+            >
+              <LogIn className="w-4 h-4 mr-2" />
+              Iniciar Sesion
+            </Button>
+          </Link>
         </div>
 
         <button
@@ -113,6 +128,16 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <Link href="/login">
+                <Button
+                  variant="outline"
+                  className="w-full rounded-full border-primary text-primary"
+                  data-testid="button-login-mobile"
+                >
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Iniciar Sesion
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}
