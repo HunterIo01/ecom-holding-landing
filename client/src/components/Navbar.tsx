@@ -51,7 +51,7 @@ export function Navbar() {
           <img 
             src="/logo-dark.png"
             alt="Ecom Holding" 
-            className={`w-auto transition-all ${isScrolled ? "h-10" : "h-14 brightness-0 invert"}`}
+            className={`w-auto transition-all ${isScrolled ? "h-14" : "h-20 brightness-0 invert"}`}
           />
         </a>
 
