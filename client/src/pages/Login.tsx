@@ -54,11 +54,11 @@ export default function Login() {
         </Link>
 
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <div className="bg-secondary/30 p-8 flex items-center justify-center border-b border-border/50">
+          <div className="p-10 flex items-center justify-center">
             <img 
-              src="/logo.png" 
+              src="/logo-dark.png" 
               alt="Ecom Holding" 
-              className="h-20 w-auto"
+              className="h-28 w-auto"
             />
           </div>
 
