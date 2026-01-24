@@ -4,18 +4,18 @@ import { CheckCircle2, TrendingUp, Users, Globe } from "lucide-react";
 const FEATURES = [
   {
     icon: TrendingUp,
-    title: "Strategic Growth",
-    description: "We leverage data-driven strategies to scale brands sustainably in competitive markets."
+    title: "Crecimiento Estrategico",
+    description: "Aprovechamos estrategias basadas en datos para escalar marcas de forma sostenible en mercados competitivos."
   },
   {
     icon: Users,
-    title: "Expert Leadership",
-    description: "Our team brings decades of combined experience in logistics, marketing, and finance."
+    title: "Liderazgo Experto",
+    description: "Nuestro equipo aporta decadas de experiencia combinada en logistica, marketing y finanzas."
   },
   {
     icon: Globe,
-    title: "Global Reach",
-    description: "Expanding market presence across borders with optimized supply chain solutions."
+    title: "Alcance Regional",
+    description: "Expandimos la presencia de mercado en toda Argentina y Latinoamerica con soluciones optimizadas de cadena de suministro."
   }
 ];
 
@@ -32,20 +32,20 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Redefining E-Commerce Ownership
+              Redefiniendo la Propiedad en E-Commerce
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              At Ecom Holding, we don't just invest in companies; we invest in potential. 
-              Our mission is to acquire premier e-commerce brands and elevate them through 
-              operational excellence, technology integration, and strategic capital allocation.
+              En Ecom Holding, no solo invertimos en empresas; invertimos en potencial. 
+              Nuestra mision es adquirir marcas de e-commerce de primera categoria y elevarlas a traves 
+              de excelencia operativa, integracion tecnologica y asignacion estrategica de capital.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              We believe in preserving the unique DNA of each brand while providing the 
-              infrastructure needed to scale beyond boundaries.
+              Creemos en preservar el ADN unico de cada marca mientras proporcionamos la 
+              infraestructura necesaria para escalar sin limites.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">
-              {["Proven Track Record", "Capital Efficiency", "Operational Expertise", "Long-term Vision"].map((item) => (
+              {["Trayectoria Comprobada", "Eficiencia de Capital", "Experiencia Operativa", "Vision a Largo Plazo"].map((item) => (
                 <div key={item} className="flex items-center space-x-3">
                   <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0" />
                   <span className="font-medium text-primary">{item}</span>

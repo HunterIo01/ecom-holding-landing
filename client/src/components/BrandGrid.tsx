@@ -10,7 +10,7 @@ export function BrandGrid() {
   if (error) {
     return (
       <div className="py-24 text-center text-destructive">
-        Failed to load portfolio. Please try again later.
+        Error al cargar el portafolio. Por favor intente mas tarde.
       </div>
     );
   }
@@ -26,14 +26,14 @@ export function BrandGrid() {
             transition={{ duration: 0.6 }}
           >
             <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/20 text-primary">
-              Our Portfolio
+              Nuestro Portafolio
             </Badge>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
-              Distinguished Brands
+              Marcas Destacadas
             </h2>
             <p className="text-muted-foreground text-lg">
-              A curated collection of market-leading e-commerce entities, 
-              each demonstrating exceptional value and growth potential.
+              Una coleccion curada de entidades de e-commerce lideres en el mercado, 
+              cada una demostrando un valor excepcional y potencial de crecimiento.
             </p>
           </motion.div>
         </div>
@@ -62,7 +62,7 @@ export function BrandGrid() {
                     <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300" />
                   </div>
                   <CardContent className="p-8">
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="flex justify-between items-start mb-4 gap-2">
                       <h3 className="font-display text-2xl font-bold text-primary">{brand.name}</h3>
                       {brand.websiteUrl && (
                         <a 
@@ -70,6 +70,7 @@ export function BrandGrid() {
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-accent transition-colors"
+                          data-testid={`link-brand-${brand.id}`}
                         >
                           <ExternalLink className="w-5 h-5" />
                         </a>

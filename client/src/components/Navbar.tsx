@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Contact", href: "#contact" },
+  { name: "Inicio", href: "#hero" },
+  { name: "Nosotros", href: "#about" },
+  { name: "Portafolio", href: "#portfolio" },
+  { name: "Contacto", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -36,22 +35,24 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a 
           href="#hero"
           onClick={(e) => scrollToSection(e, "#hero")}
-          className={`font-display font-bold text-2xl tracking-tight transition-colors ${
-            isScrolled ? "text-primary" : "text-white"
-          }`}
+          className="flex items-center gap-3"
+          data-testid="link-logo"
         >
-          Ecom Holding
+          <img 
+            src="/logo.png" 
+            alt="Ecom Holding" 
+            className="h-12 w-auto"
+          />
         </a>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">
           {NAV_LINKS.map((link) => (
             <a
@@ -61,26 +62,27 @@ export function Navbar() {
               className={`text-sm font-medium transition-colors hover:text-accent ${
                 isScrolled ? "text-primary" : "text-white/90"
               }`}
+              data-testid={`link-nav-${link.name.toLowerCase()}`}
             >
               {link.name}
             </a>
           ))}
           <Button
             onClick={(e) => {
-              // Cast to unknown first to avoid type mismatch with MouseEvent
               scrollToSection(e as unknown as React.MouseEvent<HTMLAnchorElement>, "#contact");
             }}
             variant={isScrolled ? "default" : "secondary"}
             className="rounded-full px-6"
+            data-testid="button-contact-nav"
           >
-            Get in Touch
+            Contactanos
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           className="md:hidden p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          data-testid="button-mobile-menu"
         >
           {mobileMenuOpen ? (
             <X className={isScrolled ? "text-primary" : "text-white"} />
@@ -90,7 +92,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -106,6 +107,7 @@ export function Navbar() {
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
                   className="text-primary font-medium py-2 border-b border-gray-100"
+                  data-testid={`link-mobile-${link.name.toLowerCase()}`}
                 >
                   {link.name}
                 </a>

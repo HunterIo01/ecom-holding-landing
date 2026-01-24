@@ -37,19 +37,19 @@ export async function registerRoutes(
   if (existingBrands.length === 0) {
     await storage.createBrand({
       name: "Lumina Home",
-      description: "Premium smart lighting and modern home decor solutions for the connected lifestyle.",
+      description: "Soluciones premium de iluminacion inteligente y decoracion moderna para el hogar conectado.",
       imageUrl: "https://images.unsplash.com/photo-1550226891-ef816aed4a98?q=80&w=2072&auto=format&fit=crop",
       websiteUrl: "#"
     });
     await storage.createBrand({
       name: "Apex Gear",
-      description: "High-performance athletic wear designed for endurance and style.",
+      description: "Ropa deportiva de alto rendimiento disenada para resistencia y estilo.",
       imageUrl: "https://images.unsplash.com/photo-1517466116634-9f717c78457e?q=80&w=2074&auto=format&fit=crop",
       websiteUrl: "#"
     });
     await storage.createBrand({
       name: "Velvet & Vine",
-      description: "Curated luxury wine accessories and sommelier-approved collections.",
+      description: "Accesorios de vino de lujo curados y colecciones aprobadas por sommeliers.",
       imageUrl: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070&auto=format&fit=crop",
       websiteUrl: "#"
     });
