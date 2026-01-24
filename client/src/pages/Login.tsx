@@ -46,11 +46,9 @@ export default function Login() {
       <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-accent/10 -skew-x-12 transform origin-bottom-left" />
       
       <div className="w-full max-w-md relative z-10">
-        <Link href="/">
-          <a className="inline-flex items-center text-white/70 hover:text-white transition-colors mb-8 text-sm" data-testid="link-back">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Volver al inicio
-          </a>
+        <Link href="/" className="inline-flex items-center text-white/70 hover:text-white transition-colors mb-8 text-sm" data-testid="link-back">
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Volver al inicio
         </Link>
 
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
