@@ -63,7 +63,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Llamanos</h4>
-                  <p className="text-white/60">+54 11 4567-8900</p>
+                  <p className="text-white/60">+54 11 2540-6673</p>
                 </div>
               </div>
 
