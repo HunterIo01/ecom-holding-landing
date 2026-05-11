@@ -40,7 +40,7 @@ const TESTIMONIALS = [
 ];
 
 export function PartnerSection() {
-  const whatsappNumber = "5491178526527";
+  const whatsappNumber = "543516226733";
   const whatsappMessage = encodeURIComponent("Hola! Quiero formar parte como socio de Ecom Holding");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
