@@ -48,10 +48,10 @@ export async function registerRoutes(
       websiteUrl: "https://www.klossbsas.com/"
     });
     await storage.createBrand({
-      name: "Velvet & Vine",
-      description: "Accesorios de vino de lujo curados y colecciones aprobadas por sommeliers.",
-      imageUrl: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070&auto=format&fit=crop",
-      websiteUrl: "#"
+      name: "Yalla",
+      description: "Relojes y accesorios de moda con estilo único, envío gratis y cuotas sin interés en toda Argentina.",
+      imageUrl: "/yalla.png",
+      websiteUrl: "https://www.yalla.com.ar/"
     });
     console.log("Seeded database with initial brands.");
   }
