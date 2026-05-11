@@ -38,8 +38,8 @@ export async function registerRoutes(
     await storage.createBrand({
       name: "Lumina Home",
       description: "Soluciones premium de iluminacion inteligente y decoracion moderna para el hogar conectado.",
-      imageUrl: "https://images.unsplash.com/photo-1550226891-ef816aed4a98?q=80&w=2072&auto=format&fit=crop",
-      websiteUrl: "#"
+      imageUrl: "/ctrl-recovery.png",
+      websiteUrl: "https://ctrlrecovery.com/en"
     });
     await storage.createBrand({
       name: "Apex Gear",
