@@ -22,13 +22,13 @@ const BENEFITS = [
 ];
 
 const REQUIREMENTS = [
-  "Compromiso para transferir cuando entren 3 ventas (para que el despacho confirme rapido)",
+  "Compromiso para transferir cuando entren 2 ventas (para pagar la campaña publicitaria, y asi maximizar la cantidad de ventas)",
   "Cuenta de Mercado Pago con antiguedad y limpia",
   "Sin actividad sospechosa, bloqueos o deudas en tu cuenta"
 ];
 
 const DAILY_TASKS = [
-  "Realizar transferencia de ventas cada 3 ventas",
+  "Realizar transferencia de ventas cada 2 ventas",
   "Enviar reporte a las 22PM para confirmar montos y desempeno del dia"
 ];
 
