@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, Clock, Wallet, ShieldCheck, MessageCircle, Play } from "lucide-react";
+import { CheckCircle2, Clock, Wallet, ShieldCheck, MessageCircle, Star, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -33,10 +33,82 @@ const DAILY_TASKS = [
 ];
 
 const TESTIMONIALS = [
-  { id: 1, name: "Carolina M.", location: "Buenos Aires" },
-  { id: 2, name: "Martin L.", location: "Cordoba" },
-  { id: 3, name: "Lucia R.", location: "Rosario" },
-  { id: 4, name: "Diego S.", location: "Mendoza" }
+  {
+    id: 1,
+    name: "Mirta B.",
+    location: "Buenos Aires",
+    platform: "Ualá",
+    platformColor: "bg-purple-100 text-purple-700",
+    quote: "Muy fácil de entender el proceso. Apenas entra una venta, transfiero y listo. Nunca tuve inconvenientes.",
+    initials: "MB",
+    avatarColor: "bg-purple-600",
+    date: "Abr 2026",
+    verified: true,
+  },
+  {
+    id: 2,
+    name: "Karina",
+    location: "Córdoba",
+    platform: "Personal Pay",
+    platformColor: "bg-blue-100 text-blue-700",
+    amount: "$187.554",
+    quote: "Empecé con dudas pero el equipo me explicó todo paso a paso. Hoy es mi ingreso extra fijo cada semana.",
+    initials: "K",
+    avatarColor: "bg-blue-600",
+    date: "05 Abr 2026",
+    verified: true,
+  },
+  {
+    id: 3,
+    name: "Nuria",
+    location: "Argentina",
+    platform: "Personal Pay",
+    platformColor: "bg-blue-100 text-blue-700",
+    amount: "$520.560",
+    quote: "Lo que más me gustó es que no necesitan acceder a mi cuenta. Todo transparente y con comprobante.",
+    initials: "N",
+    avatarColor: "bg-emerald-600",
+    date: "18 Abr 2026",
+    verified: true,
+  },
+  {
+    id: 4,
+    name: "Natalia G.",
+    location: "Buenos Aires",
+    platform: "Brubank",
+    platformColor: "bg-indigo-100 text-indigo-700",
+    amount: "$80.000",
+    quote: "Trabajo desde casa, a mi ritmo. El sistema es claro y el pago siempre llega a tiempo.",
+    initials: "NG",
+    avatarColor: "bg-indigo-600",
+    date: "22 Abr 2026",
+    verified: true,
+  },
+  {
+    id: 5,
+    name: "Lucas C.",
+    location: "Argentina",
+    platform: "Personal Pay",
+    platformColor: "bg-blue-100 text-blue-700",
+    amount: "$324.781",
+    quote: "Llevo varias semanas y los montos son reales. Todo se confirma con comprobante. Muy serio el equipo.",
+    initials: "LC",
+    avatarColor: "bg-orange-600",
+    date: "29 Abr 2026",
+    verified: true,
+  },
+  {
+    id: 6,
+    name: "Ayelen",
+    location: "Argentina",
+    platform: "Mercado Pago",
+    platformColor: "bg-sky-100 text-sky-700",
+    quote: "Al principio era escéptica, pero el proceso es super sencillo. Empezamos a la mañana y sin complicaciones.",
+    initials: "A",
+    avatarColor: "bg-pink-600",
+    date: "May 2026",
+    verified: true,
+  },
 ];
 
 export function PartnerSection() {
@@ -156,28 +228,68 @@ export function PartnerSection() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h3 className="font-display text-2xl font-bold text-primary text-center mb-10">
-            Testimonios de Nuestros Socios
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center mb-12">
+            <h3 className="font-display text-3xl md:text-4xl font-bold text-primary mb-3">
+              Lo Que Dicen Nuestros Socios
+            </h3>
+            <p className="text-muted-foreground text-lg">Transferencias reales, socios reales.</p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {TESTIMONIALS.map((testimonial, idx) => (
               <motion.div
                 key={testimonial.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
-                <Card className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow group">
-                  <div className="aspect-video bg-primary/5 relative flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-                    <div className="bg-white/90 w-14 h-14 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform cursor-pointer">
-                      <Play className="w-6 h-6 text-primary ml-1" />
+                <Card className="h-full border-border/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white">
+                  <CardContent className="p-6 flex flex-col h-full">
+
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-12 h-12 rounded-full ${testimonial.avatarColor} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
+                          {testimonial.initials}
+                        </div>
+                        <div>
+                          <p className="font-bold text-primary">{testimonial.name}</p>
+                          <p className="text-xs text-muted-foreground">{testimonial.location}</p>
+                        </div>
+                      </div>
+                      {testimonial.verified && (
+                        <BadgeCheck className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                      )}
                     </div>
-                  </div>
-                  <CardContent className="p-4 text-center">
-                    <p className="font-semibold text-primary">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+
+                    <div className="flex mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-5 italic">
+                      "{testimonial.quote}"
+                    </p>
+
+                    <div className="border-t border-border/50 pt-4 space-y-2">
+                      {testimonial.amount && (
+                        <div className="flex items-center justify-between bg-emerald-50 rounded-lg px-3 py-2">
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                            <span className="text-xs font-medium text-emerald-700">Transferencia verificada</span>
+                          </div>
+                          <span className="font-bold text-emerald-700 text-sm">{testimonial.amount}</span>
+                        </div>
+                      )}
+                      <div className="flex items-center justify-between">
+                        <span className={`text-xs font-semibold px-2 py-1 rounded-full ${testimonial.platformColor}`}>
+                          {testimonial.platform}
+                        </span>
+                        <span className="text-xs text-muted-foreground">{testimonial.date}</span>
+                      </div>
+                    </div>
+
                   </CardContent>
                 </Card>
               </motion.div>
