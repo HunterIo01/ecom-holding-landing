@@ -44,6 +44,7 @@ const TESTIMONIALS = [
     avatarColor: "bg-purple-600",
     date: "Abr 2026",
     verified: true,
+    stars: 4,
   },
   {
     id: 2,
@@ -108,6 +109,7 @@ const TESTIMONIALS = [
     avatarColor: "bg-pink-600",
     date: "May 2026",
     verified: true,
+    stars: 4,
   },
 ];
 
@@ -264,7 +266,7 @@ export function PartnerSection() {
 
                     <div className="flex mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                        <Star key={i} className={`w-4 h-4 ${i < (testimonial.stars ?? 5) ? "fill-amber-400 text-amber-400" : "fill-gray-200 text-gray-200"}`} />
                       ))}
                     </div>
 
