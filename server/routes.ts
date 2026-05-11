@@ -36,8 +36,8 @@ export async function registerRoutes(
   const existingBrands = await storage.getBrands();
   if (existingBrands.length === 0) {
     await storage.createBrand({
-      name: "Lumina Home",
-      description: "Soluciones premium de iluminacion inteligente y decoracion moderna para el hogar conectado.",
+      name: "CTRL Recovery®",
+      description: "Equipamiento premium de recuperación física: frío, calor y compresión para atletas exigentes.",
       imageUrl: "/ctrl-recovery.png",
       websiteUrl: "https://ctrlrecovery.com/en"
     });
