@@ -42,10 +42,10 @@ export async function registerRoutes(
       websiteUrl: "https://ctrlrecovery.com/en"
     });
     await storage.createBrand({
-      name: "Apex Gear",
-      description: "Ropa deportiva de alto rendimiento disenada para resistencia y estilo.",
-      imageUrl: "https://images.unsplash.com/photo-1517466116634-9f717c78457e?q=80&w=2074&auto=format&fit=crop",
-      websiteUrl: "#"
+      name: "Kloss Buenos Aires",
+      description: "Marca argentina de calzado y camperas de cuero con identidad urbana y colecciones exclusivas.",
+      imageUrl: "/kloss.png",
+      websiteUrl: "https://www.klossbsas.com/"
     });
     await storage.createBrand({
       name: "Velvet & Vine",
