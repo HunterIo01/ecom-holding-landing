@@ -1,13 +1,31 @@
-import { useQuery } from "@tanstack/react-query";
-import { api } from "@shared/routes";
+const brands = [
+  {
+    id: 1,
+    name: "CTRL Recovery®",
+    description: "Equipamiento premium de recuperación física: frío, calor y compresión para atletas exigentes.",
+    imageUrl: "/ctrl-recovery.png",
+    websiteUrl: "https://ctrlrecovery.com/en"
+  },
+  {
+    id: 2,
+    name: "Kloss Buenos Aires",
+    description: "Marca argentina de calzado y camperas de cuero con identidad urbana y colecciones exclusivas.",
+    imageUrl: "/kloss.png",
+    websiteUrl: "https://www.klossbsas.com/"
+  },
+  {
+    id: 3,
+    name: "Yalla",
+    description: "Relojes y accesorios de moda con estilo único, envío gratis y cuotas sin interés en toda Argentina.",
+    imageUrl: "/yalla.png",
+    websiteUrl: "https://www.yalla.com.ar/"
+  }
+];
 
 export function useBrands() {
-  return useQuery({
-    queryKey: [api.brands.list.path],
-    queryFn: async () => {
-      const res = await fetch(api.brands.list.path);
-      if (!res.ok) throw new Error("Failed to fetch brands");
-      return api.brands.list.responses[200].parse(await res.json());
-    },
-  });
+  return {
+    data: brands,
+    isLoading: false,
+    error: null
+  };
 }
