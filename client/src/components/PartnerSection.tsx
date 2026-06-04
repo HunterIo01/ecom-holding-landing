@@ -248,10 +248,12 @@ export function PartnerSection() {
           </p>
           <div className="bg-accent/10 rounded-xl p-6 border-l-4 border-accent">
             <p className="text-primary font-medium">
-              <strong>NO</strong> es necesario que accedamos a tu cuenta de Mercado Pago. Te asocias 
-              con nosotros en la parte financiera: solo recibis los pagos, los confirmas y luego 
-              los envias a una cuenta segura. Nuestro equipo se encarga de administrar, pagar 
-              proveedores, despacho, encomienda, etc.
+            Por cuestiones de control y transparencia, nuestro equipo de Auditoría requiere acceso de solo lectura (monitoreo) a determinados movimientos de la cuenta vinculada a la operación. Esto nos permite verificar ingresos, conciliaciones y trazabilidad de cada transacción, garantizando una gestión segura y profesional de los fondos involucrados.
+
+              Es importante destacar que la seguridad de la cuenta está respaldada por Mercado Pago. Las políticas de la plataforma impiden modificar datos sensibles, credenciales de acceso, información bancaria o configuraciones críticas mediante este tipo de permisos, por lo que el acceso solicitado tiene fines exclusivamente de supervisión y control. Adicionalmente, cualquier acción sensible dentro de la plataforma se encuentra protegida por mecanismos de seguridad propios de Mercado Pago, incluyendo validaciones de identidad y verificaciones adicionales requeridas por la plataforma cuando corresponde.
+
+              Este proceso forma parte de nuestros protocolos internos de cumplimiento y protección financiera, ya que administramos operaciones donde intervienen fondos de clientes y proveedores. Por este motivo, resulta fundamental contar con mecanismos de monitoreo que aseguren la correcta ejecución de cada movimiento, permitan detectar cualquier anomalía de forma temprana y garanticen los más altos estándares de transparencia, trazabilidad y seguridad operativa.
+
             </p>
           </div>
         </motion.div>
