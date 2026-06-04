@@ -52,8 +52,7 @@ const TESTIMONIALS = [
     platformColor: "bg-sky-100 text-sky-700",
     quote:
       "Muy fácil de entender el proceso. Apenas entra una venta, transfiero y listo. Nunca tuve inconvenientes.",
-    initials: "MB",
-    avatarColor: "bg-purple-600",
+    photo: "/testimonials/mirta.jpg",
     date: "Abr 2026",
     verified: true,
     stars: 4,
@@ -67,8 +66,7 @@ const TESTIMONIALS = [
     amount: "$187.554",
     quote:
       "Empecé con dudas pero el equipo me explicó todo paso a paso. Hoy es mi ingreso extra fijo cada semana.",
-    initials: "K",
-    avatarColor: "bg-blue-600",
+    photo: "/testimonials/karina.jpg",
     date: "05 Abr 2026",
     verified: true,
   },
@@ -81,8 +79,7 @@ const TESTIMONIALS = [
     amount: "$520.560",
     quote:
       "Lo que más me gustó es que no necesitan acceder a mi cuenta. Todo transparente y con comprobante.",
-    initials: "N",
-    avatarColor: "bg-emerald-600",
+    photo: "/testimonials/nuria.jpg",
     date: "18 Abr 2026",
     verified: true,
   },
@@ -95,8 +92,7 @@ const TESTIMONIALS = [
     amount: "$80.000",
     quote:
       "Trabajo desde casa, a mi ritmo. El sistema es claro y el pago siempre llega a tiempo.",
-    initials: "NG",
-    avatarColor: "bg-indigo-600",
+    photo: "/testimonials/natalia.jpg",
     date: "22 Abr 2026",
     verified: true,
   },
@@ -109,8 +105,7 @@ const TESTIMONIALS = [
     amount: "$324.781",
     quote:
       "Llevo varias semanas y los montos son reales. Todo se confirma con comprobante. Muy serio el equipo.",
-    initials: "LC",
-    avatarColor: "bg-orange-600",
+    photo: "/testimonials/lucas.jpg",
     date: "29 Abr 2026",
     verified: true,
   },
@@ -122,8 +117,7 @@ const TESTIMONIALS = [
     platformColor: "bg-sky-100 text-sky-700",
     quote:
       "Al principio era escéptica, pero el proceso es super sencillo. Empezamos a la mañana y sin complicaciones.",
-    initials: "A",
-    avatarColor: "bg-pink-600",
+    photo: "/testimonials/ayelen.jpg",
     date: "May 2026",
     verified: true,
     stars: 4,
@@ -136,8 +130,7 @@ const TESTIMONIALS = [
     platformColor: "bg-sky-100 text-sky-700",
     quote:
       "El primer mes ya había generado $460.000 de sueldo extra. No lo podía creer, pero los comprobantes están ahí. Sigo creciendo semana a semana.",
-    initials: "VR",
-    avatarColor: "bg-rose-600",
+    photo: "/testimonials/valentina.jpg",
     date: "Abr 2026",
     verified: true,
     stars: 5,
@@ -151,8 +144,7 @@ const TESTIMONIALS = [
     amount: "$256.000",
     quote:
       "Logré cumplir mis objetivos semanales, accedí a los 3 bonos y pasé de un básico de $140.000 semanal a $196.000. Un cambio enorme para mi familia.",
-    initials: "SM",
-    avatarColor: "bg-teal-600",
+    photo: "/testimonials/sebastian.jpg",
     date: "Abr 2026",
     verified: true,
     stars: 5,
@@ -166,8 +158,7 @@ const TESTIMONIALS = [
     amount: "$360.000",
     quote:
       "En mi primer mes saqué $460.000 extra trabajando desde casa. Pensé que era mentira, pero lo viví y los comprobantes lo prueban.",
-    initials: "RP",
-    avatarColor: "bg-fuchsia-600",
+    photo: "/testimonials/romina.jpg",
     date: "Mar 2026",
     verified: true,
     stars: 4,
@@ -180,8 +171,7 @@ const TESTIMONIALS = [
     platformColor: "bg-sky-100 text-sky-700",
     quote:
       "Lo que más me convenció fue la transparencia. Cada transferencia tiene su comprobante. Ya llevo más de $400.000 de sueldo extra generados este mes.",
-    initials: "GT",
-    avatarColor: "bg-cyan-600",
+    photo: "/testimonials/gonzalo.jpg",
     date: "May 2026",
     verified: true,
     stars: 5,
@@ -195,8 +185,7 @@ const TESTIMONIALS = [
     amount: "$189.000",
     quote:
       "Cumplí los 3 bonos en la segunda semana y salté de $140.000 a $196.000 semanal. Es el mejor ingreso extra que encontré hasta hoy.",
-    initials: "FC",
-    avatarColor: "bg-violet-600",
+    photo: "/testimonials/florencia.jpg",
     date: "Abr 2026",
     verified: true,
     stars: 4,
@@ -210,8 +199,7 @@ const TESTIMONIALS = [
     amount: "$412.000",
     quote:
       "Muy prolijo el equipo. Las transacciones siempre se acreditan en tiempo y forma. Llevo meses y jamás tuve un problema.",
-    initials: "ML",
-    avatarColor: "bg-lime-600",
+    photo: "/testimonials/matias.jpg",
     date: "Mar 2026",
     verified: true,
     stars: 5,
@@ -224,9 +212,50 @@ const TESTIMONIALS = [
     platformColor: "bg-sky-100 text-sky-700",
     quote:
       "Ya supero los $460.000 de sueldo extra por mes. Sigo en el método porque funciona de verdad y el equipo siempre está disponible.",
-    initials: "DV",
-    avatarColor: "bg-amber-600",
+    photo: "/testimonials/daniela.jpg",
     date: "May 2026",
+    verified: true,
+    stars: 4,
+  },
+  {
+    id: 14,
+    name: "Cecilia A.",
+    location: "Buenos Aires",
+    platform: "Mercado Pago",
+    platformColor: "bg-sky-100 text-sky-700",
+    amount: "$143.000",
+    quote:
+      "No esperaba que fuera tan ordenado. El equipo te guía desde el primer momento y los pagos llegan siempre a tiempo.",
+    photo: "/testimonials/cecilia.jpg",
+    date: "May 2026",
+    verified: true,
+    stars: 5,
+  },
+  {
+    id: 15,
+    name: "Roberto F.",
+    location: "Rosario",
+    platform: "Mercado Pago",
+    platformColor: "bg-sky-100 text-sky-700",
+    amount: "$298.000",
+    quote:
+      "Empecé por curiosidad y en pocas semanas ya tenía ingresos constantes. Todo claro y con comprobantes.",
+    photo: "/testimonials/roberto.jpg",
+    date: "Abr 2026",
+    verified: true,
+    stars: 5,
+  },
+  {
+    id: 16,
+    name: "Carlos M.",
+    location: "Córdoba",
+    platform: "Mercado Pago",
+    platformColor: "bg-sky-100 text-sky-700",
+    amount: "$375.000",
+    quote:
+      "Llevaba tiempo buscando un ingreso extra confiable. Acá encontré exactamente eso. El proceso es simple y el equipo muy profesional.",
+    photo: "/testimonials/carlos.jpg",
+    date: "Mar 2026",
     verified: true,
     stars: 4,
   },
@@ -401,10 +430,12 @@ export function PartnerSection() {
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <div
-                          className={`w-12 h-12 rounded-full ${testimonial.avatarColor} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}
-                        >
-                          {testimonial.initials}
+                        <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                          <img
+                            src={testimonial.photo}
+                            alt={testimonial.name}
+                            className="w-full h-full object-cover object-top"
+                          />
                         </div>
                         <div>
                           <p className="font-bold text-primary">
